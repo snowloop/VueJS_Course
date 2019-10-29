@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family :'LearningCurve';
+  src : url('learning_curve_regular_ot_tt.ttf')
+}
+
+li{
+  color : red
+}
+
+
+.out{
+  color : green;
+  font-size: large
+}
+
+p{
+width: 350px; /* On a indiqué une largeur (obligatoire) */
+margin: auto; /* On peut donc demander à ce que le bloc soit
+centré avec auto */
+border: 1px solid black;
+text-align: justify;
+padding: 12px;
+margin-bottom: 20px;
+}
+
+h1 + p {
+  color : red;
+  font-size: xx-large;
+  font-family: LearningCurve;
+  text-align: center
+}
+
+.imagefloat{
+  float : left
+}
