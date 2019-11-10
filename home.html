@@ -3,22 +3,24 @@
 
 <head>
   <meta charset="utf-8" />
-  <link href="style.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet" />
   <title>VueJS Course</title>
 </head>
 
 <body>
   <div id="app">
-<h1>Dynamic classes</h1>
-<input type="checkbox" v-model="available" value="available"/>
-<h2 v-bind:class="{av1:available,av2:!available}">
-Let see how it works
-</h2>
-<input type="checkbox" v-model="empty" value="empty"/>
-<h2 v-bind:class="compClass">
-Let see how it works
-</h2>
+    <h1>Punching ball game</h1>
+    <div v-on:click="punch" v-bind:class="{burst : destroyed}" id="bag">
+    </div>
+    <div id="health">
+      <div v-bind:style="{width: getHealth +'%'}"></div>
+    </div>
+    <div id="button">
+      <button v-on:click="restart">Let's play again</button>
+    </div>
+
   </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="app.js"></script>
