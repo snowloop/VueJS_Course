@@ -3,24 +3,22 @@
 
 <head>
   <meta charset="utf-8" />
+  <link href="style.css" rel="stylesheet"/>
   <title>VueJS Course</title>
-
 </head>
 
 <body>
   <div id="app">
-    <h1>{{ greet('afternoon')}}</h1>
     <p>
-      Name : {{ name }}
+      My age is {{ age }}
     </p>
-    <p>
-      Job : {{ job }}
-    </p>
-    <a v-bind:href="website" target="_blank">My website</a>
-    <br />
-    <input type="text" v-bind:value="name"/>
-    <p v-html="websiteTag">
-    </p>
+    <button v-on:click="age++">Add a year</button>
+    <button v-on:click="age--">Substract a year</button>
+    <button v-on:dblclick="age--">Substract a year with a double click</button>
+    <button v-on:click="age *=2">Double the age</button>
+    <div id="canvas" v-on:mousemove="updateXY">
+      {{ x }},{{ y }}
+    </div>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
