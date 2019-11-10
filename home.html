@@ -9,16 +9,13 @@
 
 <body>
   <div id="app">
-    <p>
-      My age is {{ age }}
-    </p>
-    <button v-on:click="age++">Add a year</button>
-    <button v-on:click="age--">Substract a year</button>
-    <button v-on:dblclick="age--">Substract a year with a double click</button>
-    <button v-on:click="age *=2">Double the age</button>
-    <div id="canvas" v-on:mousemove="updateXY">
-      {{ x }},{{ y }}
-    </div>
+<h1>Keyboards event</h1>
+<label ></label>Name : </label>
+<input type="text" v-on:keyup.enter="updateName" />
+<label ></label>Age : </label>
+<input type="text" v-on:keyup.enter="updateAge" />
+<h2>Your name is {{ name }}</h2>
+<h2>Your age is {{ age }}</h2>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

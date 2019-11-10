@@ -1,15 +1,16 @@
 new Vue({
   el: '#app',
   data: {
-    age: 25,
-    x:1,
-    y:1,
+    name: "ALex",
+    age: 2,
   },
   methods: {
-    updateXY :function(event){
-      this.x = event.offsetX
-      this.y = event.offsetY
-      this.age++
+    updateName: function(event) {
+      console.log(event)
+      this.name = event.srcElement.value
+    },
+    updateAge: function(event) {
+      this.age = event.srcElement.value
     }
   }
 })
