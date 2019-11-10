@@ -11,9 +11,9 @@
   <div id="app">
 <h1>Keyboards event</h1>
 <label ></label>Name : </label>
-<input type="text" v-on:keyup.enter="updateName" />
+<input type="text" v-model="name" />
 <label ></label>Age : </label>
-<input type="text" v-on:keyup.enter="updateAge" />
+<input type="text" v-model="age"/>
 <h2>Your name is {{ name }}</h2>
 <h2>Your age is {{ age }}</h2>
   </div>
