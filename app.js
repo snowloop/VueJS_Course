@@ -1,9 +1,17 @@
 new Vue({
   el: '#app',
   data: {
-    name: "ALex",
-    age: 2,
+    age: 0,
+    x:0,
+    y:0,
   },
-  methods: {
+  methods: {},
+  computed :{
+    returnAX : function(){
+      return this.age + this.x
+    },
+    returnAY : function(){
+      return this.age + this.y
+    }
   }
 })

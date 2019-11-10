@@ -9,13 +9,11 @@
 
 <body>
   <div id="app">
-<h1>Keyboards event</h1>
-<label ></label>Name : </label>
-<input type="text" v-model="name" />
-<label ></label>Age : </label>
-<input type="text" v-model="age"/>
-<h2>Your name is {{ name }}</h2>
-<h2>Your age is {{ age }}</h2>
+<h1>Computed properties</h1>
+<button v-on:click="x++">Increment x</button>
+<button v-on:click="y++">Increment y</button>
+<h2>This is age + x : {{ returnAX }}</h2>
+<h2>This is age + y : {{ returnAY }}</h2>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
