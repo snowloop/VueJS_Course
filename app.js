@@ -1,17 +1,15 @@
 new Vue({
   el: '#app',
   data: {
-    age: 0,
-    x:0,
-    y:0,
+available :true,
+empty :true
   },
   methods: {},
   computed :{
-    returnAX : function(){
-      return this.age + this.x
-    },
-    returnAY : function(){
-      return this.age + this.y
+    compClass:function(){
+      return {
+        empty : this.empty
+      }
     }
   }
 })
