@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
   <title>VueJS Course</title>
 
 </head>
@@ -16,6 +15,11 @@
     </p>
     <p>
       Job : {{ job }}
+    </p>
+    <a v-bind:href="website" target="_blank">My website</a>
+    <br />
+    <input type="text" v-bind:value="name"/>
+    <p v-html="websiteTag">
     </p>
   </div>
 </body>
