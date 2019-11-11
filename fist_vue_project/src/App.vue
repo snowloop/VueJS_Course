@@ -1,11 +1,13 @@
 <template>
 <div>
   <h1>{{ title }}</h1>
-  <p>{{ greeting() }}</p>
+  <animals></animals>
 </div>
 </template>
 
 <script>
+import Animals from './components/Animals.vue';
+
 export default {
   name: 'app',
   data :()=>{
@@ -14,12 +16,9 @@ export default {
     }
   },
   methods:{
-    greeting :()=>{
-      return "Hey man"
-    }
   },
   components: {
-
+    'animals' : Animals
   }
 }
 </script>
