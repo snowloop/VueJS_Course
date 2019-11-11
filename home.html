@@ -8,17 +8,11 @@
 </head>
 
 <body>
-  <div id="app">
-    <h1>Punching ball game</h1>
-    <div v-on:click="punch" v-bind:class="{burst : destroyed}" id="bag">
-    </div>
-    <div id="health">
-      <div v-bind:style="{width: getHealth +'%'}"></div>
-    </div>
-    <div id="button">
-      <button v-on:click="restart">Let's play again</button>
-    </div>
-
+  <div id="app-one">
+<hellocomp></hellocomp>
+  </div>
+  <div id="app-two">
+<HelloComp></HelloComp>
   </div>
 
 </body>

@@ -1,27 +1,27 @@
-new Vue({
-  el: '#app',
-  data: {
-    health: 100,
-    damage: 0,
-    destroyed : false
+Vue.component('hellocomp', {
+  template: '<p>Hello my name is {{ name }}.<button v-on:click="changeName">Change my name</button></p>',
+  data: function() {
+    return {
+      name: "Yoshi"
+    }
   },
   methods: {
-    punch: function() {
-      if (this.damage< 90) {
-        this.damage +=10;
-      } else {
-        this.damage +=10;
-        this.destroyed = true
-      }
-    },
-    restart:function(){
-      this.destroyed = false;
-      this.damage = 0;
-    }
-  },
-  computed: {
-    getHealth: function() {
-      return this.health - this.damage
+    changeName: function() {
+      this.name = "Mario"
     }
   }
+
+})
+
+var appOne = new Vue({
+  el: '#app-one',
+  methods: {},
+  computed: {}
+})
+
+
+var appTwo = new Vue({
+  el: '#app-two',
+  methods: {},
+  computed: {}
 })
