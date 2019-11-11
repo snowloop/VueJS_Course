@@ -1,30 +1,29 @@
 <template>
-<div>
-  <h1>{{ title }}</h1>
-  <animals></animals>
-</div>
+  <div>
+<app-header></app-header>
+<app-animals></app-animals>
+  </div>
 </template>
 
 <script>
+import Header from './components/Header.vue';
 import Animals from './components/Animals.vue';
 
 export default {
   name: 'app',
-  data :()=>{
+  data: () => {
     return {
-      title :"My very first vue App"
+      title :"Vue animals"
     }
   },
-  methods:{
-  },
+  methods: {},
   components: {
-    'animals' : Animals
+    "app-header" :Header,
+    "app-animals" :Animals,
   }
 }
 </script>
 
 <style>
-h1 {
-  color :red;
-}
+
 </style>
