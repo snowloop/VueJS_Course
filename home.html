@@ -9,10 +9,10 @@
 
 <body>
   <div id="app-one">
-<hellocomp></hellocomp>
-  </div>
-  <div id="app-two">
-<HelloComp></HelloComp>
+    <h1>Using refs</h1>
+    <input type="text" ref="input"/>
+    <button v-on:click="readRefs">Submit</button>
+    <p>{{ output }}</p>
   </div>
 
 </body>
