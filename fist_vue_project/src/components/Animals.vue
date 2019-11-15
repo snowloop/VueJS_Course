@@ -1,38 +1,26 @@
 <template>
 <div id="animals">
   <ol>
-    <li v-for="animal in animalArray" :key="animal" v-on:mouseover="animal.show = true" v-on:mouseout="animal.show = false">
+    <li v-for="(animal,index) in animalArray" :key="animal" v-on:mouseover="animal.show = true" v-on:mouseout="animal.show = false">
       <h2>{{ animal.name }}</h2>
       <h3 v-show="animal.show">{{ animal.speciality }} </h3>
+      <h3 v-on:click="deleteAnimal(index)">Delete the animal</h3>
     </li>
   </ol>
 </div>
 </template>
 <script>
 export default {
-  data: () => {
-    return {
-      animalArray: [{
-          name: 'Dog',
-          speciality: 'bark',
-          show: false
-        },
-        {
-          name: 'Cat',
-          speciality: 'sleep',
-          show: false
-        },
-        {
-          name: 'Fish',
-          speciality: 'Absolutely nothin',
-          show: false
-        },
-        {
-          name: 'Bird',
-          speciality: 'Fly',
-          show: false
-        }
-      ]
+  props : {
+    animalArray :{
+      type : Array,
+      required : true
+    }
+  },
+  methods :{
+    deleteAnimal :function(index){
+      this.animalArray = this.animalArray.slice(0,index)
+      .concat(this.animalArray.slice(index +1))
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
 <app-header></app-header>
-<app-animals></app-animals>
+<app-animals v-bind:animalArray="animalArray"></app-animals>
   </div>
 </template>
 
@@ -13,7 +13,28 @@ export default {
   name: 'app',
   data: () => {
     return {
-      title :"Vue animals"
+      title :"Vue animals",
+      animalArray: [{
+          name: 'Dog',
+          speciality: 'bark',
+          show: false
+        },
+        {
+          name: 'Cat',
+          speciality: 'sleep',
+          show: false
+        },
+        {
+          name: 'Fish',
+          speciality: 'Absolutely nothin',
+          show: false
+        },
+        {
+          name: 'Bird',
+          speciality: 'Fly',
+          show: false
+        }
+      ]
     }
   },
   methods: {},
