@@ -1,8 +1,8 @@
 <template>
 <div id="animals">
   <ol>
-    <li v-for="animal in animalArray" :key="animal" v-on:click="animal.show = !animal.show">
-      <h2>{{ animal.name}}</h2>
+    <li v-for="animal in animalArray" :key="animal" v-on:mouseover="animal.show = true" v-on:mouseout="animal.show = false">
+      <h2>{{ animal.name }}</h2>
       <h3 v-show="animal.show">{{ animal.speciality }} </h3>
     </li>
   </ol>
@@ -55,6 +55,7 @@ ol{
 li{
     flex-grow: 1;
     flex-basis: 300px;
+    max-width: 200px;
     text-align: center;
     padding: 30px;
     border: 1px solid #222;
