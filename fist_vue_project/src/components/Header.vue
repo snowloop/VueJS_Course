@@ -1,17 +1,24 @@
 
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 <script>
 
 export default{
-data:()=>{
-    return {
-      title :"Vue animals"
+  props :{
+    title :{
+      type : String,
+      required : true
     }
+  },
+methods :{
+  changeTitle :function(){
+
+    this.$emit('changeTitle','This is another title')
   }
+}
 }
 </script>
 

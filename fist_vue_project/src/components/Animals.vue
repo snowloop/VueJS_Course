@@ -30,6 +30,7 @@ export default {
 #animals{
     width: 100%;
     max-width: 1200px;
+    min-height: 300px;
     margin: 40px auto;
     padding: 0 20px;
     box-sizing: border-box;
